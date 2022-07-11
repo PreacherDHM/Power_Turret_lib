@@ -5,11 +5,13 @@ public class Vector2 {
     public double y = 0;
     public Radions thada = new Radions();
 
-    public static Vector2 position(double x, double y) {
-        Vector2 vec = new Vector2();
-        vec.x = x;
-        vec.y = y;
-        return vec;
+    public Vector2(double x,double y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    public static Vector2 position(double x, double y) { 
+        return new Vector2(x,y);
     }
 
     public double getThada() {
@@ -28,7 +30,7 @@ public class Vector2 {
         double tmpX = this.x;
         double tmpY = this.y;
         Vector2 tmpV;
-        for (int i = 0; i <= vecs.length; i++) {
+        for (int i = 0; i < vecs.length; i++) {
             tmpX *= vecs[i];
             tmpY *= vecs[i];
         }
@@ -41,7 +43,7 @@ public class Vector2 {
         double tmpX = 0;
         double tmpY = 0;
         Vector2 tmpV;
-        for (int i = 0; i <= vecs.length; i++) {
+        for (int i = 0; i < vecs.length; i++) {
             tmpX *= vecs[i].x;
             tmpY *= vecs[i].y;
         }
@@ -57,12 +59,18 @@ public class Vector2 {
         return tmp;
     }
 
+    public static Vector2 Dev(Vector2 vec2, Vector2 dvec2) {
+        Vector2 tmp = vec2;
+        tmp.x = tmp.x/dvec2.x;
+        tmp.y = tmp.y/dvec2.y;
+        return tmp;
+    }
 
     public static Vector2 Sub(Vector2... vecs) {
         double tmpX = 0;
         double tmpY = 0;
         Vector2 tmpV;
-        for (int i = 0; i <= vecs.length; i++) {
+        for (int i = 0; i < vecs.length; i++) {
             tmpX -= vecs[i].x;
             tmpY -= vecs[i].y;
         }
@@ -75,7 +83,7 @@ public class Vector2 {
         double tmpX = 0;
         double tmpY = 0;
         Vector2 tmpV;
-        for (int i = 0; i <= vecs.length; i++) {
+        for (int i = 0; i < vecs.length; i++) {
             tmpX += vecs[i].x;
             tmpY += vecs[i].y;
         }

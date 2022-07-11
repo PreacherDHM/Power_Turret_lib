@@ -1,24 +1,28 @@
 package Power_Turret.Utils;
 
+
 import com.revrobotics.CANSparkMax;
+import com.revrobotics.CANSparkMaxLowLevel.MotorType;
 import com.revrobotics.RelativeEncoder;
 import com.revrobotics.SparkMaxPIDController;
-import com.revrobotics.CANSparkMaxLowLevel.MotorType;
 
 import Power_Turret.Math.Vector2;
 import Power_Turret.Math.Radions;
 
 public class RevControler implements ControlerInterface {
     private CANSparkMax m_sparkMax;
+    private CANSparkMax m_motor = new CANSparkMax(4, MotorType.kBrushless);
     private RelativeEncoder m_encoder;
     private SparkMaxPIDController m_PIDControler;
     public int motionSlot = 0;
+    private static final int motorID = 4;
 
     @Override
     public void setControler(int id) {
-        m_sparkMax = new CANSparkMax(id, MotorType.kBrushless);
-        m_encoder = m_sparkMax.getEncoder();
-        m_PIDControler = m_sparkMax.getPIDController();
+        //m_motor = new CANSparkMax(motorID, MotorType.kBrushless);
+           //m_encoder = m_sparkMax.getEncoder();
+        //m_encoder = m_sparkMax.getEncoder();
+        //m_PIDControler = m_sparkMax.getPIDController();
     }
 
     @Override

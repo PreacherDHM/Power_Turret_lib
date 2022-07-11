@@ -38,7 +38,11 @@ public class Targeting {
 
     public void Update(Vector2 currentPosition) {
         if (!m_useProjectileVel) {
-            m_prevPosition = m_currPosition;
+            if (m_prevPosition == null) {
+                m_prevPosition = currentPosition;
+            } else {
+                m_prevPosition = m_currPosition;
+            }
             m_currPosition = currentPosition;
 
             m_futurePosition = Vector2.Add(
