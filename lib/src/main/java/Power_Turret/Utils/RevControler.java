@@ -19,7 +19,7 @@ public class RevControler implements ControlerInterface {
 
     @Override
     public void setControler(int id) {
-        //m_motor = new CANSparkMax(motorID, MotorType.kBrushless);
+        m_motor = new CANSparkMax(motorID, MotorType.kBrushless);
            //m_encoder = m_sparkMax.getEncoder();
         //m_encoder = m_sparkMax.getEncoder();
         //m_PIDControler = m_sparkMax.getPIDController();
