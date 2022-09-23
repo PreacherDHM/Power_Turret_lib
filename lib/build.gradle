@@ -1,6 +1,7 @@
 plugins {
     id 'java-library'
     id 'maven-publish'
+    
 }
 
 sourceCompatibility = JavaVersion.VERSION_11
@@ -20,13 +21,13 @@ allprojects {
 }
 
 dependencies {
-    implementation 'edu.wpi.first.wpilibj:wpilibj-java:2022.2.1'
+    api 'edu.wpi.first.wpilibj:wpilibj-java:2022.2.1'
 
 
-    implementation 'com.revrobotics.frc:REVLib-java:2022.1.0'
+    api 'com.revrobotics.frc:REVLib-java:2022.1.0'
 
-    implementation 'com.ctre.phoenix:api-java:5.20.2'
-    implementation 'com.ctre.phoenix:wpiapi-java:5.20.2'
+    api 'com.ctre.phoenix:api-java:5.20.2'
+    api 'com.ctre.phoenix:wpiapi-java:5.20.2'
 
 
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.2'

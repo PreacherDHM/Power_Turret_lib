@@ -4,5 +4,6 @@ public enum TargetingSolution {
     Idle,
     Rotation,
     Position,
+    FeeldOreanted,
     TargetingSystem,
 }

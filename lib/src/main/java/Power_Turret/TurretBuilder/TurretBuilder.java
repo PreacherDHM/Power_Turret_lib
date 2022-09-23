@@ -92,7 +92,7 @@ public class TurretBuilder {
      *         of the builder.
      **/
     public Turret Build() {
-        Turret tmp = new Turret();
+        Turret tmp = new Turret(m_targeting,m_targetSystem,m_odomitry,m_hallEffectSenser,m_controler);
         return tmp;
     }
 

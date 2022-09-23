@@ -243,7 +243,7 @@ public class Turret {
      */
     public void UpdateTargetSystem() {
         m_targetingSystem.Update(m_currentPosition);
-        //m_targetingSystemPosition = m_targetingSystem.Get();
+        // m_targetingSystemPosition = m_targetingSystem.Get();
     }
 
     public Vector2 GetTargetingSystemPosition() {
